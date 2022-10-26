@@ -33,6 +33,28 @@ public class IterativeMethods {
 		}
 		return p;
 	}
+	public static  int[] helper (int[] array) {
+		int[] array;
+	}
+
+	int[]array;
+	
+	
+	public static int[] toReversed1(int i) {
+		i = array.length/2;
+		int[] reversed = new int[array.length];
+		int lastIndex = array.length - 1;
+		if (i == 0) {
+			return reversed;
+		}
+		else {
+			int mirrorIndex = lastIndex - i;
+			reversed[toReversed1(i-1,array[i])] = array[mirrorIndex];
+			reversed[mirrorIndex] = array[i];
+			toReversed1(i-1)
+		}
+	
+	}
 
 	/**
 	 * @param array the array to create a reverse of, not to be mutated
@@ -54,3 +76,4 @@ public class IterativeMethods {
 		return reversed;
 	}
 }
+

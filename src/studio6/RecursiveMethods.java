@@ -11,12 +11,15 @@ public class RecursiveMethods {
 	 * @return the sum of the first n terms of the geometric series (1/2 + 1/4 + 1/8
 	 *         ...)
 	 */
-	public static double geometricSum(int n) {
-		
-			// FIXME compute the geometric sum for the first n terms recursively
-			return 0;
-		
+	public static double geometricSum(int n)
+	{
+		double sum = 0.0;
+	    if (n == 0)
+	      return 0.0;
+	    else	
+	      return geometricSum(n-1) + Math.pow(0.5, n);
 	}
+
 
 	/**
 	 * This method uses recursion to compute the greatest common divisor
@@ -26,13 +29,19 @@ public class RecursiveMethods {
 	 * @param q second operand
 	 * @return greatest common divisor of p and q
 	 */
-	public static int gcd(int p, int q) {
+	public static int gcd(int p, int q) 
+	{
+		if (q == 0) 
+			return p;
 		
-			// FIXME compute the gcd of p and q using recursion
-			return 0;
+		else 
+			return gcd(q,p%q);
 		
 	}
 
+//	int temp = q;
+//	q = p % q;
+//	p = temp;
 	
 
 	/**
